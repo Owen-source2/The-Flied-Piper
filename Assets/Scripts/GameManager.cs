@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        UpdateUI();
     }
 
     public void CollectHoney(int amount)
