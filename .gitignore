@@ -4,6 +4,7 @@
 .vscode/settings.json
 Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
+/Assets/AllSkyFree/
 /[Ll]ibrary/
 /Logs/
 Packages/manifest.json
@@ -15,4 +16,3 @@ UserSettings/Layouts/default-6000.dwlt
 UserSettings/Search.index
 UserSettings/Search.settings
 /[Tt]emp/
-0
