@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI honeyText;
     public TextMeshProUGUI annoyanceText;
-    public Slider honeyGauge;
+    public Slider honeyGauge, annoyanceGauge;
 
     private void Awake()
     {
@@ -41,5 +41,6 @@ public class GameManager : MonoBehaviour
         honeyText.text = "Honey: " + honeyCollected;
         annoyanceText.text = "Pharaoh Annoyance: " + pharaohAnnoyance;
         honeyGauge.value = honeyCollected;
+        annoyanceGauge.value=pharaohAnnoyance;
     }
 }
