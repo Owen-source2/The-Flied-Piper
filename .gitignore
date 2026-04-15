@@ -2,3 +2,9 @@
 /Library/
 /Temp/
 /Logs
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+The-Flied-Piper.slnx
