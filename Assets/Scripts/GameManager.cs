@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI honeyText;
     public TextMeshProUGUI annoyanceText;
-    public Slider honeyGauge;
 
     private void Awake()
     {
@@ -40,6 +38,5 @@ public class GameManager : MonoBehaviour
     {
         honeyText.text = "Honey: " + honeyCollected;
         annoyanceText.text = "Pharaoh Annoyance: " + pharaohAnnoyance;
-        honeyGauge.value = honeyCollected;
     }
 }
