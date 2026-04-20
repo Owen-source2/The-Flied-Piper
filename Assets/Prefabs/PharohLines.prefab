@@ -132,7 +132,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -249.64484, y: 0, z: -249.56677, w: -56.02864}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -152,10 +152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PharohDialogue
   isMad: 0
   isHappy: 0
-  happySayings:
+  dialogBox: {fileID: 2370972097793561147}
+  happyLines:
   - 'Pharoh: Ah, that''s better! No more flies in my eyes!'
   - 'Pharoh: Ha ha ha! Great! Keep slathering! Keep this up, and you might just join
-    me in Aaru!'
+    me in Aaru! '
   - 'Pharoh: See, work like this is why we feed you more! Now, if only my cleaners
     were half as diligent...'
   - 'Pharoh: More wine, slave!'
@@ -168,3 +169,5 @@ MonoBehaviour:
   - 'Pharoh: Perhaps you''d feel more motivated if we made trails of breadcrumbs,
     to follow like the RAT YOU ARE!'
   - 'Pharoh: More wine, slave!'
+  textPersist: 10
+  textCooldown: 5
