@@ -12,6 +12,7 @@ public class PharohDialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void SelectLine()
     {
+        //Checks pharoh mood, plays random line from appropriate array, defined in engine
         if (isMad)
         {
             dialogBox.text=madLines[Random.Range(0,madLines.Length)];
@@ -24,6 +25,7 @@ public class PharohDialogue : MonoBehaviour
     }    
     void Start()
     {
+        //Plays random lines on set interval, defined in engine
         InvokeRepeating(nameof(SelectLine),textCooldown,textCooldown);
     }
     void Update()
@@ -42,6 +44,7 @@ public class PharohDialogue : MonoBehaviour
     }
     IEnumerator ClearLine()
     {
+        //Waits a certain amount of time, before clearing text box
         yield return new WaitForSeconds(textPersist);
         dialogBox.text = null;
     }
