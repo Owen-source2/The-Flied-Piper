@@ -2,6 +2,7 @@
 /Library/
 /Temp/
 /Logs
+/Packages/
 .vscode/extensions.json
 .vscode/launch.json
 .vscode/settings.json
