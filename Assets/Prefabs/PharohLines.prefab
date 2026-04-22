@@ -169,5 +169,5 @@ MonoBehaviour:
   - 'Pharoh: Perhaps you''d feel more motivated if we made trails of breadcrumbs,
     to follow like the RAT YOU ARE!'
   - 'Pharoh: More wine, slave!'
-  textPersist: 10
-  textCooldown: 5
+  textPersist: 5
+  textCooldown: 45

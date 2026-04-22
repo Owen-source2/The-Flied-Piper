@@ -63,6 +63,7 @@ namespace StarterAssets
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
+		public Transform spawnpoint;
 
 	
 #if ENABLE_INPUT_SYSTEM
@@ -263,6 +264,16 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+		void Kill()
+		{
+			transform.position=spawnpoint.transform.position;
+		}
+		void OnTriggerEnter(Collider other) {
+			if (other.gameObject.tag == "Trap")
+			{
+				Kill();
+			}
 		}
 	}
 }
