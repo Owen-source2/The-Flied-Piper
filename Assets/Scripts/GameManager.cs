@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,10 +9,14 @@ public class GameManager : MonoBehaviour
     [Header("Stats")]
     public int honeyCollected = 0;
     public int pharaohAnnoyance = 10;
+    public int annoyThreshold=5;
 
     [Header("UI")]
     public TextMeshProUGUI honeyText;
     public TextMeshProUGUI annoyanceText;
+    public Slider honeyGauge, annoyGauge;
+    public float timer=10.0f;
+    private float timerInit;
 
     private void Awake()
     {
@@ -23,6 +28,16 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+        timerInit=timer;
+    }
+    void Update()
+    {
+        timer-=Time.deltaTime;
+        if (timer <= 0)
+        {
+            UpdateAnnoyanceAndHoney();
+            timer=timerInit;
         }
     }
 
@@ -38,5 +53,20 @@ public class GameManager : MonoBehaviour
     {
         honeyText.text = "Honey: " + honeyCollected;
         annoyanceText.text = "Pharaoh Annoyance: " + pharaohAnnoyance;
+        honeyGauge.value=honeyCollected;
+        annoyGauge.value=pharaohAnnoyance;
+    }
+    void UpdateAnnoyanceAndHoney()
+    {
+        honeyCollected-=1;
+        if (honeyCollected <= annoyThreshold)
+        {
+            pharaohAnnoyance+=1;
+        }
+        else
+        {
+            pharaohAnnoyance-=1;
+        }
+        UpdateUI();
     }
 }

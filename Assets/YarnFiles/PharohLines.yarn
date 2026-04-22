@@ -1,0 +1,42 @@
+title: Start
+---
+<<declare $honey to 0>>
+<<declare $annoyed to 0>>
+===
+
+title: Happy1
+---
+Pharoh: Ah, that's better! No more flies in my eyes!
+===
+title: Happy2
+---
+Pharoh: Ha ha ha! Great! Keep slathering! Keep this up, and you might just join me in Aaru! 
+===
+title: Happy3
+---
+Pharoh: See, work like this is why we feed you more! Now, if only my cleaners were half as diligent...
+===
+title: Flavor1
+---
+Pharoh: More wine, slave!
+===
+title: Annoy1
+---
+Pharoh: Augh, these blasted flies! Do your job!
+===
+title: Annoy2
+---
+Pharoh: What are you doing! Get more honey, or you'll be scrubbing the chamber pots for a month!
+===
+title: Annoy3
+---
+Pharoh: May a curse be laid in your... general direction! 
+===
+title: Annoy4
+---
+Pharoh: Guards! Take him away! I can't even bear the smell of such a failure!
+===
+title: Annoy5
+---
+Pharoh: Perhaps you'd feel more motivated if we made trails of breadcrumbs, to follow like the RAT YOU ARE!
+===
