@@ -63,5 +63,6 @@ public class GameManager : MonoBehaviour
         {
             pharaohAnnoyance-=1;
         }
+        UpdateUI();
     }
 }
