@@ -64,7 +64,7 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 		public Transform spawnpoint;
-
+		[SerializeField] private AudioSource footstepAudio;
 	
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
@@ -197,6 +197,25 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+		
+			// FOOTSTEP AUDIO
+bool isMoving = _input.move.magnitude > 0.1f;
+
+if (isMoving && Grounded)
+{
+    if (!footstepAudio.isPlaying)
+    {
+        footstepAudio.Play();
+    }
+}
+else
+{
+    if (footstepAudio.isPlaying)
+    {
+        footstepAudio.Stop();
+    }
+}
+		
 		}
 
 		private void JumpAndGravity()

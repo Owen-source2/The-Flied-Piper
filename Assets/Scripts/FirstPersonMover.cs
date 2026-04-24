@@ -10,6 +10,7 @@ public class FirstPersonMover : MonoBehaviour
     private Vector3 startPos;
     public bool useForce = true;
     public float speed;
+    [SerializeField] private AudioSource footstepAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +24,23 @@ public class FirstPersonMover : MonoBehaviour
     void Update()
     {
         moveVector = moveAction.ReadValue<Vector2>();
+
+        bool isMoving = moveVector.x != 0 || moveVector.y != 0;
+
+        if (isMoving)
+        {
+            if (!footstepAudio.isPlaying)
+            {
+                footstepAudio.Play();
+            }
+        }
+        else
+        {
+            if (footstepAudio.isPlaying)
+            {
+                footstepAudio.Stop();
+            }
+        }
     }
 
     void FixedUpdate()
