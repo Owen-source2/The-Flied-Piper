@@ -7,16 +7,16 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Stats")]
-    public int honeyCollected = 0;
-    public int pharaohAnnoyance = 10;
+    public int honeyCollected = 0,maxHoney=10;
+    public int pharaohAnnoyance = 10,maxAnnoyance=10;
     public int annoyThreshold=5;
 
     [Header("UI")]
     public TextMeshProUGUI honeyText;
     public TextMeshProUGUI annoyanceText;
     public Slider honeyGauge, annoyGauge;
-    public float timer=10.0f;
-    private float timerInit;
+    public float timer=10.0f,gameTime=150.0f;
+    private float timerInit,gameTimeInit;
 
     private void Awake()
     {
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         timerInit=timer;
+        gameTimeInit=gameTime;
+        UpdateUI();
     }
     void Update()
     {
@@ -39,13 +41,17 @@ public class GameManager : MonoBehaviour
             UpdateAnnoyanceAndHoney();
             timer=timerInit;
         }
+        gameTime-=Time.deltaTime;
+        if (gameTime <= 0)
+        {
+            EndGame();
+        }
     }
 
     public void CollectHoney(int amount)
     {
         honeyCollected += amount;
         pharaohAnnoyance -= amount;
-
         UpdateUI();
     }
 
@@ -68,5 +74,24 @@ public class GameManager : MonoBehaviour
             pharaohAnnoyance-=1;
         }
         UpdateUI();
+    }
+    void EndGame()
+    {
+        if (pharaohAnnoyance <= maxAnnoyance)
+        {
+            PlayGoodEnd();
+        }
+        else
+        {
+            PlayBadEnd();
+        }
+    }
+    void PlayGoodEnd()
+    {
+        print("Good End");
+    }
+    void PlayBadEnd()
+    {
+        print("BadEnd");
     }
 }

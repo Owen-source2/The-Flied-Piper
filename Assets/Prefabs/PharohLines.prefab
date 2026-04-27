@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -249.64484, y: 0, z: -249.56677, w: -56.02864}
+  m_margin: {x: -367.63046, y: 0, z: -424.94775, w: -56.02864}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -154,20 +154,20 @@ MonoBehaviour:
   isHappy: 0
   dialogBox: {fileID: 2370972097793561147}
   happyLines:
-  - 'Pharoh: Ah, that''s better! No more flies in my eyes!'
-  - 'Pharoh: Ha ha ha! Great! Keep slathering! Keep this up, and you might just join
-    me in Aaru! '
-  - 'Pharoh: See, work like this is why we feed you more! Now, if only my cleaners
+  - 'Pharaoh: Ah, that''s better! No more flies in my eyes!'
+  - 'Pharaoh: Ha ha ha! Great! Keep slathering! Keep this up, and you might just
+    join me in Aaru! '
+  - 'Pharaoh: See, work like this is why we feed you more! Now, if only my cleaners
     were half as diligent...'
-  - 'Pharoh: More wine, slave!'
+  - 'Pharaoh: More wine, slave!'
   madLines:
-  - 'Pharoh: Augh, these blasted flies! Do your job!'
-  - 'Pharoh: What are you doing! Get more honey, or you''ll be scrubbing the chamber
+  - 'Pharaoh: Augh, these blasted flies! Do your job!'
+  - 'Pharaoh: What are you doing! Get more honey, or you''ll be scrubbing the chamber
     pots for a month!'
-  - 'Pharoh: May a curse be laid in your... general direction!'
-  - 'Pharoh: Guards! Take him away! I can''t even bear the smell of such a failure!'
-  - 'Pharoh: Perhaps you''d feel more motivated if we made trails of breadcrumbs,
+  - 'Pharaoh: May a curse be laid in your... general direction!'
+  - 'Pharaoh: Guards! Take him away! I can''t even bear the smell of such a failure!'
+  - 'Pharaoh: Perhaps you''d feel more motivated if we made trails of breadcrumbs,
     to follow like the RAT YOU ARE!'
-  - 'Pharoh: More wine, slave!'
+  - 'Pharaoh: More wine, slave!'
   textPersist: 5
-  textCooldown: 45
+  textCooldown: 20
