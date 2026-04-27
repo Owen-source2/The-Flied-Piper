@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Slider honeyGauge, annoyGauge;
     public float timer=10.0f,gameTime=150.0f;
     private float timerInit,gameTimeInit;
+    private bool gameOver;
 
     private void Awake()
     {
@@ -36,13 +37,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer-=Time.deltaTime;
+        print(timer);
         if (timer <= 0)
         {
-            UpdateAnnoyanceAndHoney();
+            AnnoyPharaoh();
             timer=timerInit;
         }
         gameTime-=Time.deltaTime;
-        if (gameTime <= 0)
+        if (gameTime <= 0&&!gameOver)
         {
             EndGame();
         }
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
     {
         honeyCollected += amount;
         pharaohAnnoyance -= amount;
+        timer=timerInit;
         UpdateUI();
     }
 
@@ -62,21 +65,14 @@ public class GameManager : MonoBehaviour
         honeyGauge.value=honeyCollected;
         annoyGauge.value=pharaohAnnoyance;
     }
-    void UpdateAnnoyanceAndHoney()
+    void AnnoyPharaoh()
     {
-        honeyCollected-=1;
-        if (honeyCollected <= annoyThreshold)
-        {
-            pharaohAnnoyance+=1;
-        }
-        else
-        {
-            pharaohAnnoyance-=1;
-        }
+        pharaohAnnoyance++;
         UpdateUI();
     }
     void EndGame()
     {
+        gameOver=true;
         if (pharaohAnnoyance <= maxAnnoyance)
         {
             PlayGoodEnd();
