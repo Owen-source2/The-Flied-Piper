@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI honeyText;
-    public TextMeshProUGUI annoyanceText;
+    public TextMeshProUGUI annoyanceText,timerReadout;
     public Slider honeyGauge, annoyGauge;
     public float timer=10.0f,gameTime=150.0f;
     private float timerInit,gameTimeInit;
@@ -31,13 +31,13 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         timerInit=timer;
-        gameTimeInit=gameTime;
+        //gameTimeInit=gameTime;
         UpdateUI();
     }
     void Update()
     {
         timer-=Time.deltaTime;
-        print(timer);
+        //print(timer);
         if (timer <= 0)
         {
             AnnoyPharaoh();
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+        UpdateUI();
     }
 
     public void CollectHoney(int amount)
@@ -60,6 +61,9 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
+        print(gameTime);
+        print(Mathf.FloorToInt(gameTime));
+        timerReadout.text=Mathf.FloorToInt(gameTime).ToString();
         honeyText.text = "Honey: " + honeyCollected;
         annoyanceText.text = "Pharaoh Annoyance: " + pharaohAnnoyance;
         honeyGauge.value=honeyCollected;
@@ -73,7 +77,7 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameOver=true;
-        if (pharaohAnnoyance <= maxAnnoyance)
+        if (pharaohAnnoyance <= annoyThreshold)
         {
             PlayGoodEnd();
         }
