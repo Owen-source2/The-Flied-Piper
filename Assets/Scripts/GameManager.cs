@@ -61,8 +61,6 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
-        print(gameTime);
-        print(Mathf.FloorToInt(gameTime));
         timerReadout.text=Mathf.FloorToInt(gameTime).ToString();
         honeyText.text = "Honey: " + honeyCollected;
         annoyanceText.text = "Pharaoh Annoyance: " + pharaohAnnoyance;
