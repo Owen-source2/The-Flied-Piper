@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [Header("Stats")]
     public int honeyCollected = 0,maxHoney=10;
     public int pharaohAnnoyance = 10,maxAnnoyance=10;
-    public int annoyThreshold=5;
+    public int annoyThreshold=5, totalHoney=8;
 
     [Header("UI")]
     public TextMeshProUGUI honeyText;
@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
         if (gameTime <= 0&&!gameOver)
         {
             EndGame();
+        }
+        if(honeyCollected>=totalHoney){
+            PlayGoodEnd();
         }
         UpdateUI();
     }
@@ -88,11 +91,11 @@ public class GameManager : MonoBehaviour
     void PlayGoodEnd()
     {
         print("Good End");
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
     void PlayBadEnd()
     {
         print("BadEnd");
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }
