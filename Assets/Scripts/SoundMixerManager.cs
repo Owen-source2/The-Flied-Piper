@@ -11,9 +11,7 @@ public class SoundMixerManager : MonoBehaviour
 
     void Start()
     {
-        masterSlider.value = PlayerPrefs.GetFloat("Master", 1f);
-        musicSlider.value  = PlayerPrefs.GetFloat("Music",  1f);
-        sfxSlider.value    = PlayerPrefs.GetFloat("SFX",    1f);
+        
     }
 
     public void SetMaster(float val)
