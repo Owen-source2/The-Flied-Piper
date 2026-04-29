@@ -8,14 +8,14 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         PlayClick();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void Options()
     {
         PlayClick();
         Debug.Log("Options opened");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void Quit()
