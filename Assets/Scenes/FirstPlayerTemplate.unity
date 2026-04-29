@@ -15851,7 +15851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -97724,6 +97724,14 @@ PrefabInstance:
 '
       objectReference: {fileID: 0}
     - target: {fileID: 2370972097793561147, guid: 6aaaca7c77e20e4d6ad01010722de0d9, type: 3}
+      propertyPath: m_margin.x
+      value: -295.4561
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370972097793561147, guid: 6aaaca7c77e20e4d6ad01010722de0d9, type: 3}
+      propertyPath: m_margin.z
+      value: -302.92172
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370972097793561147, guid: 6aaaca7c77e20e4d6ad01010722de0d9, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -97801,7 +97809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545772725687652319, guid: 6aaaca7c77e20e4d6ad01010722de0d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 2545772725687652319, guid: 6aaaca7c77e20e4d6ad01010722de0d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
