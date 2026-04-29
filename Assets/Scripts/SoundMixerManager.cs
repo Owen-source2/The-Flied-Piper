@@ -1,22 +1,40 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SoundMixerManager : MonoBehaviour
 {
-       [SerializeField]  private AudioMixer audioMixer;
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
 
-    public void SetMasterVolume(float level)
+    void Start()
     {
-        audioMixer.SetFloat("Master", Mathf.Log10(level) * 20f);
+        masterSlider.value = PlayerPrefs.GetFloat("Master", 1f);
+        musicSlider.value  = PlayerPrefs.GetFloat("Music",  1f);
+        sfxSlider.value    = PlayerPrefs.GetFloat("SFX",    1f);
     }
 
-    public void SetSoundFXVolume(float level)
+    public void SetMaster(float val)
     {
-        audioMixer.SetFloat("SFX", Mathf.Log10(level) * 20f);
+        Set("Master", val);
     }
 
-    public void SetMusicVolume(float level)
+    public void SetMusic(float val)
     {
-        audioMixer.SetFloat("Music", Mathf.Log10(level) * 20f);
+        Set("Music", val);
+    }
+
+    public void SetSFX(float val)
+    {
+        Set("SFX", val);
+    }
+
+    private void Set(string param, float val)
+    {
+        audioMixer.SetFloat(param, Mathf.Log10(val) * 20f);
+        PlayerPrefs.SetFloat(param, val);
+        PlayerPrefs.Save();
     }
 }

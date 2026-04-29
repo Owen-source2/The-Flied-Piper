@@ -290,8 +290,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 758964187}
         m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 0
+        m_MethodName: SetMusic
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -538,8 +538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -149.19702, y: -5}
+  m_SizeDelta: {x: 81.606, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186419684
 MonoBehaviour:
@@ -1168,6 +1168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundMixerManager
   audioMixer: {fileID: 24100000, guid: ad6a7e2c80aaa6c4183e8a7a15203033, type: 2}
+  masterSlider: {fileID: 105156891}
+  musicSlider: {fileID: 1201324129}
+  sfxSlider: {fileID: 2114304932}
 --- !u!1 &846452677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,8 +1664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -150.25821, y: -5}
+  m_SizeDelta: {x: 79.4836, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079535291
 MonoBehaviour:
@@ -1933,8 +1936,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 758964187}
         m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
-        m_MethodName: SetMasterVolume
-        m_Mode: 0
+        m_MethodName: SetMaster
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2125,8 +2128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -140.22894, y: -5}
+  m_SizeDelta: {x: 99.5421, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656661963
 MonoBehaviour:
@@ -2792,8 +2795,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 758964187}
         m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
-        m_MethodName: SetSoundFXVolume
-        m_Mode: 0
+        m_MethodName: SetSFX
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
