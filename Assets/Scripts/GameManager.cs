@@ -78,15 +78,7 @@ public class GameManager : MonoBehaviour
     }
     void EndGame()
     {
-        gameOver=true;
-        if (pharaohAnnoyance <= annoyThreshold)
-        {
-            PlayGoodEnd();
-        }
-        else
-        {
-            PlayBadEnd();
-        }
+        PlayBadEnd();
     }
     void PlayGoodEnd()
     {
