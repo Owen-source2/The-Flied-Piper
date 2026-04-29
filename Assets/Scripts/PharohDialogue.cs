@@ -21,7 +21,7 @@ public class PharohDialogue : MonoBehaviour
         {
             dialogBox.text=happyLines[Random.Range(0,happyLines.Length)];
         }
-        ClearLine();
+        StartCoroutine(ClearLine());
     }    
     void Start()
     {
@@ -46,7 +46,7 @@ public class PharohDialogue : MonoBehaviour
     {
         //Waits a certain amount of time, before clearing text box
         yield return new WaitForSeconds(textPersist);
-        dialogBox.text = null;
+        dialogBox.SetText(string.Empty);
     }
 
 }
